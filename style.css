@@ -1,10 +1,16 @@
+/* 공통요소 */
+
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 #container {
   background: var(--linkbrary-bg, #F0F6FF);
+  font-family: 'Pretendard', serif;
 }
+
+/* 헤더 */
 
 header {
   padding: 20px 200px;
@@ -18,17 +24,87 @@ header>div {
   align-items: center;
 }
 
-header>div>a:nth-child(2){
+header>div>a:nth-child(2) {
   padding: 16px 20px;
   width: 128px;
   background: var(--gra-purpleblue-to-skyblue,
-   linear-gradient(91deg, #6D6AFE 0.12%, #6AE3FE 101.84%));
+      linear-gradient(91deg, #6D6AFE 0.12%, #6AE3FE 101.84%));
   border-radius: 8px;
   text-align: center;
-  text-decoration: none;
-  font-family: 'Pretendard', serif;
   font-size: 18px;
   font-weight: 600;
   color: #f5f5f5;
 }
 
+/* 메인 */
+
+main {
+  max-width: 1920px;
+  padding: 70px 360px 0px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+}
+
+main>div {
+  text-align: center;
+}
+
+h1 {
+  margin: 0 auto;
+  width: 708px;
+  height: 160px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 80px;
+  background: linear-gradient(91deg, #6D6AFE 17.28%, #FF9F9F 74.98%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h1>span {
+  color: #000;
+}
+
+main a {
+  display: block;
+  margin: 40px auto;
+  width: 350px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: var(--gra-purpleblue-to-skyblue,
+      linear-gradient(91deg, #6D6AFE 0.12%, #6AE3FE 101.84%));
+  color: #F5F5F5;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+figure {
+  width: 1200px;
+  height: 590px;
+  margin: 0 auto;
+  position: relative;
+}
+
+figure>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 50px 41px;
+  width: 1118px;
+  height: 659px;
+  border-radius: 25px;
+  background: linear-gradient(180deg, 
+  rgba(196, 196, 196, 0.00) 67.68%, 
+  #F0F6FF 94.76%);
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+}
+
+figure img {
+  width: 1118px;
+  height: 706.956px;
+  margin: 50px 41px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+}
