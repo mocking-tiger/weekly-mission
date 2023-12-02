@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  background: var(--linkbrary-bg, #F0F6FF);
+}
+
+header {
+  padding: 20px 200px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+header>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header>div>a:nth-child(2){
+  padding: 16px 20px;
+  width: 128px;
+  background: var(--gra-purpleblue-to-skyblue,
+   linear-gradient(91deg, #6D6AFE 0.12%, #6AE3FE 101.84%));
+  border-radius: 8px;
+  text-align: center;
+}
