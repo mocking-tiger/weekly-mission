@@ -52,6 +52,8 @@ section figure {
   height: 450px;
   border-radius: 15px;
   background: #F0F6FF;
+  overflow: hidden;
+  position: relative;
 }
 
 span {
@@ -169,11 +171,6 @@ main figure img {
   color: transparent;
 }
 
-#section1 figure {
-  position: relative;
-  overflow: hidden;
-}
-
 #section1 figure>div {
   display: flex;
   position: absolute;
@@ -223,3 +220,32 @@ main figure img {
   -webkit-background-clip: text;
   color: transparent;
 }
+
+
+/***** 섹션3 *****/
+
+#section3 h2 {
+  background: linear-gradient(99deg, #6D7CCD 19.76%, rgba(82, 136, 133, 0.22) 52.69%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#section3 img:nth-child(1) {
+  width: 934px;
+  height: 591px;
+  filter: brightness(60%);
+  position: relative;
+  right: 34.6%;
+  bottom: 14%;
+}
+
+#section3 img:nth-child(2) {
+  width: 416px;
+  height: 271px;
+  position: absolute;
+  top: 112px;
+  left: 49.750px;
+}
+
+
