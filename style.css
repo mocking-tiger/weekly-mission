@@ -1,16 +1,26 @@
-/* 공통요소 */
+/***** 공통요소 *****/
 
 * {
   box-sizing: border-box;
   text-decoration: none;
+  font-family: 'Pretendard', serif;
 }
 
 #container {
   background: var(--linkbrary-bg, #F0F6FF);
-  font-family: 'Pretendard', serif;
 }
 
-/* 헤더 */
+section {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+span {
+  color: #000;
+}
+
+
+/***** 헤더 *****/
 
 header {
   padding: 20px 200px;
@@ -36,7 +46,8 @@ header>div>a:nth-child(2) {
   color: #f5f5f5;
 }
 
-/* 메인 */
+
+/***** 메인 *****/
 
 main {
   max-width: 1920px;
@@ -63,10 +74,6 @@ h1 {
   color: transparent;
 }
 
-h1>span {
-  color: #000;
-}
-
 main a {
   display: block;
   margin: 40px auto;
@@ -80,14 +87,14 @@ main a {
   font-weight: 600;
 }
 
-figure {
+main figure {
   width: 1200px;
   height: 590px;
   margin: 0 auto;
   position: relative;
 }
 
-figure>div {
+main figure>div {
   position: absolute;
   top: 0;
   left: 0;
@@ -95,16 +102,98 @@ figure>div {
   width: 1118px;
   height: 659px;
   border-radius: 25px;
-  background: linear-gradient(180deg, 
-  rgba(196, 196, 196, 0.00) 67.68%, 
-  #F0F6FF 94.76%);
+  background: linear-gradient(180deg,
+      rgba(196, 196, 196, 0.00) 67.68%,
+      #F0F6FF 94.76%);
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
 }
 
-figure img {
+main figure img {
   width: 1118px;
   height: 706.956px;
   margin: 50px 41px;
   border-radius: 25px;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+}
+
+
+/***** 섹션1 *****/
+
+#section1 {
+  padding: 120px 461px 50px;
+}
+
+#section1>div {
+  width: 998px;
+  height: 450px;
+  display: flex;
+  gap: 157px;
+}
+
+#section1>div>div {
+  /*텍스트박스*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+#section1 h2 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: normal;
+  background: linear-gradient(96deg, #FE8A8A 1.72%, #A4CEFF 74.97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#section1 p {
+  color: #6b6b6b;
+  font-family: 'Abel';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+#section1 figure {
+  position: relative;
+  width: 550px;
+  height: 450px;
+  border-radius: 15px;
+  background: #F0F6FF;
+  overflow: hidden;
+}
+
+#section1 figure>div {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: -25%;
+}
+
+.imgScroll {
+  width: 279px;
+  height: 274.927px;
+  margin: 88px 0px 87.07px;
+  margin-right: -12px;
+}
+
+#section1 article {
+  position: absolute;
+  width: 244px;
+  height: 239px;
+  border-radius: 11px;
+  border: 2px solid #6D6AFE;
+  top: 22.8%;
+  left: 28%;
+}
+
+#icon {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  margin: 312px 142px 92px 362px;
 }
