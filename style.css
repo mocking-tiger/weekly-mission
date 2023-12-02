@@ -13,6 +13,45 @@
 section {
   max-width: 1920px;
   margin: 0 auto;
+  padding: 50px 461px;
+}
+
+section>div {
+  width: 998px;
+  height: 450px;
+  display: flex;
+  gap: 157px;
+}
+
+section>div>div {
+  /*텍스트박스*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+section h2 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: normal;
+}
+
+section p {
+  color: #6b6b6b;
+  font-family: 'Abel';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+section figure {
+  width: 550px;
+  height: 450px;
+  border-radius: 15px;
+  background: #F0F6FF;
 }
 
 span {
@@ -120,50 +159,18 @@ main figure img {
 /***** 섹션1 *****/
 
 #section1 {
-  padding: 120px 461px 50px;
-}
-
-#section1>div {
-  width: 998px;
-  height: 450px;
-  display: flex;
-  gap: 157px;
-}
-
-#section1>div>div {
-  /*텍스트박스*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  white-space: nowrap;
+  padding-top: 120px;
 }
 
 #section1 h2 {
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  line-height: normal;
   background: linear-gradient(96deg, #FE8A8A 1.72%, #A4CEFF 74.97%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
-#section1 p {
-  color: #6b6b6b;
-  font-family: 'Abel';
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 150%;
-}
-
 #section1 figure {
   position: relative;
-  width: 550px;
-  height: 450px;
-  border-radius: 15px;
-  background: #F0F6FF;
   overflow: hidden;
 }
 
@@ -196,4 +203,23 @@ main figure img {
   width: 46px;
   height: 46px;
   margin: 312px 142px 92px 362px;
+}
+
+
+/***** 섹션2 *****/
+
+#section2 figure {
+  padding: 114px 68px 66px 68px;
+}
+
+#section2 img {
+  width: 414px;
+  height: 270px;
+}
+
+#section2 h2 {
+  background: linear-gradient(277deg, #6FBAFF 59.22%, #FFD88B 93.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
