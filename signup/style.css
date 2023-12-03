@@ -21,6 +21,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 32px;
+  position: relative;
 }
 
 
@@ -91,6 +92,24 @@ form input:focus {
   margin-bottom: 30px;
 }
 
+form>img:nth-of-type(1) {
+  width: 16px;
+  height: 16px;
+  fill: #FFF;
+  position: absolute;
+  top: 45%;
+  right: 38%;
+}
+
+form>img:nth-of-type(2) {
+  width: 16px;
+  height: 16px;
+  fill: #FFF;
+  position: absolute;
+  top: 62.5%;
+  right: 38%;
+}
+
 button {
   color: var(--grey-light, #F5F5F5);
   font-size: 18px;
@@ -105,7 +124,7 @@ button {
   border: none;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
@@ -131,12 +150,12 @@ button:hover{
   background: var(--linkbrary-gray-10, #E7EFFB);
 }
 
-#socialLogin div{
+#socialLogin div {
   display: flex;
   gap: 16px;
 }
 
-#socialLogin img{
+#socialLogin img {
   width: 42px;
   height: 42px;
 }
