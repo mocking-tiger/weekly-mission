@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/font.css">
+</head>
+<body>
+  <div id="container">
+
+    <main>
+      <div id="inputBox">
+        <div id="logo">
+          <a href="/"><img src="/img/logo.svg" alt="로고"></a>
+          <div>
+            <p>이미 회원이신가요?</p>
+            <a href="/signin/signin.html">로그인 하기</a>
+          </div>
+        </div>
+
+        <form>
+          <label for="inputEmail">이메일</label>
+          <input type="email" id="inputEmail">
+          <label for="inputPassword">비밀번호</label>
+          <input type="text" id="inputPassword">
+          <img src="/img/eye-on.svg">
+          <label for="repeatPassword">비밀번호 확인</label>
+          <input type="text" id="repeatPassword">
+          <img src="/img/eye-on.svg">
+          <button type="submit">회원가입</button>
+        </form>
+      </div>
+
+      <div id="socialLogin">
+        <h2>다른 방식으로 가입하기</h2>
+        <div>
+          <a href="https://www.google.com/">
+            <img src="/img/googleIcon.png"></a>
+          <a href="https://www.kakaocorp.com/page/">
+            <img src="/img/kakaoIcon.png"></a>
+        </div>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

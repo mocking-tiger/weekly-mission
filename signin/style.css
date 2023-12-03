@@ -1,0 +1,167 @@
+/* 공통요소 */
+
+* {
+  box-sizing: border-box;
+  font-family: Pretendard;
+}
+
+:root{
+  --primary: #6d6afe;
+  --red: #ff5b56;
+  --black: #111322;
+  --white: #ffffff;
+  --gray1: #3e3e43;
+  --gray2: #9fa6b2;
+  --gray3: #ccd5e3;
+  --gray4: #e7effb;
+  --gray5: #f0f6ff;
+}
+
+body {
+  background-color: var(--gray5);
+}
+
+#container {
+  width: 1440px;
+  padding: 238px 0 252px;
+  margin: 0 auto;
+}
+
+main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+}
+
+
+/* 로고부분 */
+
+#logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+#logo img {
+  width: 210.583px;
+  height: 38px;
+}
+
+#logo div {
+  display: flex;
+  gap: 8px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#logo a {
+  color: var(--primary);
+  font-weight: 600;
+  line-height: normal;
+}
+
+
+/* input박스 부분 */
+
+form {
+  display: flex;
+  flex-direction: column;
+  color: var(--black);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+label {
+  margin-bottom: 12px;
+}
+
+form input {
+  width: 400px;
+  padding: 18px 15px;
+  border-radius: 8px;
+  border: 1px solid var(--gray3);
+  background: var(--white);
+  outline: none;
+}
+
+form input:focus {
+  border: 1px solid var(--primary);
+}
+
+#inputEmail {
+  margin-bottom: 24px;
+}
+
+#inputPassword {
+  margin-bottom: 30px;
+}
+
+form img {
+  width: 16px;
+  height: 16px;
+  fill: var(--white);
+  position: absolute;
+  top: 55%;
+  right: 38%;
+}
+
+button {
+  color: var(--grey-light, #F5F5F5);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 400px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: var(--gra-purpleblue-to-skyblue,
+      linear-gradient(91deg, #6D6AFE 0.12%, #6AE3FE 101.84%));
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+/* 소셜로그인부분 */
+
+#socialLogin {
+  display: flex;
+  width: 400px;
+  padding: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--linkbrary-gray-100, #373740);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  border-radius: 8px;
+  border: 1px solid var(--gray3);
+  background: var(--gray4);
+}
+
+#socialLogin div {
+  display: flex;
+  gap: 16px;
+}
+
+#socialLogin img {
+  width: 42px;
+  height: 42px;
+}
