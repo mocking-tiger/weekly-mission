@@ -5,8 +5,20 @@
   font-family: Pretendard;
 }
 
+:root{
+  --primary: #6d6afe;
+  --red: #ff5b56;
+  --black: #111322;
+  --white: #ffffff;
+  --gray1: #3e3e43;
+  --gray2: #9fa6b2;
+  --gray3: #ccd5e3;
+  --gray4: #e7effb;
+  --gray5: #f0f6ff;
+}
+
 body {
-  background-color: #f0f6ff;
+  background-color: var(--gray5);
 }
 
 #container {
@@ -51,7 +63,7 @@ main {
 }
 
 #logo a {
-  color: #6D6AFE;
+  color: var(--primary);
   font-weight: 600;
   line-height: normal;
 }
@@ -62,7 +74,7 @@ main {
 form {
   display: flex;
   flex-direction: column;
-  color: var(--black, #000);
+  color: var(--black);
   font-family: Pretendard;
   font-size: 14px;
   font-style: normal;
@@ -78,13 +90,13 @@ form input {
   width: 400px;
   padding: 18px 15px;
   border-radius: 8px;
-  border: 1px solid lightgray;
-  background: var(--linkbrary-white, #FFF);
+  border: 1px solid var(--gray3);
+  background: var(--white);
   outline: none;
 }
 
 form input:focus {
-  border: 1px solid var(--linkbrary-primary-color, #6D6AFE);
+  border: 1px solid var(--primary);
 }
 
 #inputEmail {
@@ -98,7 +110,7 @@ form input:focus {
 form img {
   width: 16px;
   height: 16px;
-  fill: #FFF;
+  fill: var(--white);
   position: absolute;
   top: 55%;
   right: 38%;
@@ -140,8 +152,8 @@ button:hover {
   line-height: normal;
 
   border-radius: 8px;
-  border: 1px solid var(--linkbrary-gray-20, #CCD5E3);
-  background: var(--linkbrary-gray-10, #E7EFFB);
+  border: 1px solid var(--gray3);
+  background: var(--gray4);
 }
 
 #socialLogin div {
