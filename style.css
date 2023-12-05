@@ -13,7 +13,7 @@
 section {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 50px 461px;
+  padding: 50px 0 50px;
 }
 
 section>div {
@@ -21,6 +21,7 @@ section>div {
   height: 450px;
   display: flex;
   gap: 157px;
+  margin: 0 auto;
 }
 
 section>div>div {
@@ -99,10 +100,9 @@ header>div>a:nth-child(2) {
 
 main {
   max-width: 1920px;
-  padding: 70px 360px 0px;
+  padding: 70px 0 0;
   margin: 70px auto 0;
   overflow: hidden;
-  display: flex;
 }
 
 main>div {
