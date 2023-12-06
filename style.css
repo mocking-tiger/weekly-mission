@@ -48,7 +48,8 @@ section p {
   line-height: 150%;
 }
 
-section figure {
+section figure,
+section figure img {
   width: 550px;
   height: 450px;
   border-radius: 15px;
@@ -178,48 +179,8 @@ main figure img {
   color: transparent;
 }
 
-#section1 figure>div {
-  display: flex;
-  position: absolute;
-  top: 0px;
-  left: -25%;
-}
-
-.imgScroll {
-  width: 279px;
-  height: 274.927px;
-  margin: 88px 0px 87.07px;
-  margin-right: -12px;
-}
-
-#section1 article {
-  position: absolute;
-  width: 244px;
-  height: 239px;
-  border-radius: 11px;
-  border: 2px solid #6D6AFE;
-  top: 22.8%;
-  left: 28%;
-}
-
-#icon {
-  position: absolute;
-  width: 46px;
-  height: 46px;
-  margin: 312px 142px 92px 362px;
-}
-
 
 /***** 섹션2 *****/
-
-#section2 figure {
-  padding: 114px 68px 66px 68px;
-}
-
-#section2 img {
-  width: 414px;
-  height: 270px;
-}
 
 #section2 h2 {
   background: linear-gradient(277deg, #6FBAFF 59.22%, #FFD88B 93.66%);
@@ -238,37 +199,8 @@ main figure img {
   color: transparent;
 }
 
-#section3 img:nth-child(1) {
-  width: 934px;
-  height: 591px;
-  filter: brightness(60%);
-  position: relative;
-  right: 34.6%;
-  bottom: 14%;
-}
-
-#section3 img:nth-child(2) {
-  width: 416px;
-  height: 271px;
-  position: absolute;
-  top: 112px;
-  left: 49.750px;
-}
-
 
 /***** 섹션4 *****/
-
-#section4 figure {
-  padding-top: 55px;
-  padding-left: 60px;
-}
-
-#section4 img {
-  width: 619px;
-  height: 584px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
-}
 
 #section4 figure div {
   position: absolute;
@@ -328,7 +260,7 @@ footer>div>div {
   gap: 30px;
 }
 
-#footCenter a{
+#footCenter a {
   color: #CFCFCF;
   text-align: center;
   font-family: Abel;
