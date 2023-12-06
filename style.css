@@ -102,7 +102,7 @@ header>div>a:nth-child(2) {
 main {
   max-width: 1920px;
   padding: 70px 0 0;
-  margin: 70px auto 0;
+  margin: 90px auto 0;
   overflow: hidden;
 }
 
@@ -271,7 +271,36 @@ footer>div>div {
 @media(max-width:1199px) {
   header {
     padding: 20px 32px;
+  }
 
+  header>div {
+    justify-content: space-around;
+  }
+
+  main {
+    max-width: 1200px;
+    padding: 39px 0 0;
+  }
+
+  h1{
+    white-space: pre;
+    margin-bottom: 115px;
+  }
+
+  main figure {
+    width: 698px;
+    height: 343px;
+  }
+
+  main figure img,
+  main figure div {
+    width: 650.303px;
+    height: 410.993px;
+    margin: 29.1px 23.8px -69px;
+  }
+
+  main figure div {
+    height: 383.114px;
   }
 }
 
