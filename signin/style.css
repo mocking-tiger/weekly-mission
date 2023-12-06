@@ -5,7 +5,7 @@
   font-family: Pretendard;
 }
 
-:root{
+:root {
   --primary: #6d6afe;
   --red: #ff5b56;
   --black: #111322;
@@ -21,10 +21,12 @@ body {
   background-color: var(--gray5);
 }
 
-#container {
-  width: 1440px;
-  padding: 238px 0 252px;
+.container {
+  width: 100%;
+  padding-top: 238px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 main {
@@ -113,7 +115,7 @@ form img {
   fill: var(--white);
   position: absolute;
   top: 55%;
-  right: 38%;
+  right: 7%;
 }
 
 button {

@@ -21,10 +21,12 @@ body {
   background-color: var(--gray5);
 }
 
-#container {
-  width: 1440px;
-  padding: 238px 0 116px;
+.container {
+  width: 100%;
+  padding-top: 238px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 main {
@@ -110,7 +112,7 @@ form>img:nth-of-type(1) {
   fill: var(--white);
   position: absolute;
   top: 45%;
-  right: 38%;
+  right: 7%;
 }
 
 form>img:nth-of-type(2) {
@@ -119,7 +121,7 @@ form>img:nth-of-type(2) {
   fill: var(--white);
   position: absolute;
   top: 62.5%;
-  right: 38%;
+  right: 7%;
 }
 
 button {
