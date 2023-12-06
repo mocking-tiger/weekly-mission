@@ -6,7 +6,7 @@
   font-family: 'Pretendard', sans-serif;
 }
 
-#container {
+.container {
   background: var(--linkbrary-bg, #F0F6FF);
 }
 
@@ -225,7 +225,7 @@ footer {
   width: 100%;
   margin-top: 120px;
   text-align: center;
-  font-family: 'Abel', sans-serif;  
+  font-family: 'Abel', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -264,3 +264,15 @@ footer>div>div {
   display: flex;
   gap: 12px;
 }
+
+
+/***** 미디어 쿼리 *****/
+
+@media(max-width:1199px) {
+  header {
+    padding: 20px 32px;
+
+  }
+}
+
+@media(max-width:767px) {}
