@@ -256,7 +256,7 @@ footer>div>div {
 }
 
 
-/***** 미디어 쿼리 *****/
+/***** 미디어 쿼리(태블릿) *****/
 
 @media(max-width:1199px) {
   header {
@@ -317,4 +317,56 @@ footer>div>div {
   }
 }
 
-@media(max-width:767px) {}
+
+/***** 미디어 쿼리(모바일) *****/
+
+@media(max-width:767px) {
+  header {
+    padding: 13px 32px;
+  }
+
+  header>div {
+    width: 390px;
+  }
+
+  main {
+    margin: 76px auto 0;
+    padding: 28px 32px 0;
+    width: 390px;
+  }
+
+  h1 {
+    width: auto;
+    height: auto;
+    margin: 0;
+    font-size: 32px;
+    line-height: 42px;
+    background: linear-gradient(91deg, #6D6AFE 40.28%, #FF9F9F 55.98%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  main a {
+    width: 200px;
+    margin: 24px auto;
+    font-family: Pretendard;
+    font-size: 14px;
+  }
+
+  main figure {
+    width: 325px;
+    height: 160px;
+  }
+
+  main figure img,
+  main figure div {
+    width: 302.792px;
+    height: 191.717px;
+    margin: 13.6px 11.1px -32px;
+  }
+
+  main figure div {
+    height: 178.712px;
+  }
+}
