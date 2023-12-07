@@ -54,7 +54,6 @@ section figure img {
   height: 450px;
   border-radius: 15px;
   background: #F0F6FF;
-  overflow: hidden;
   position: relative;
 }
 
@@ -202,15 +201,6 @@ main figure img {
 
 /***** 섹션4 *****/
 
-#section4 figure div {
-  position: absolute;
-  width: 619px;
-  height: 584px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 48.72%, #000 128.17%);
-  top: 55px;
-  left: 60px;
-}
-
 #section4 h2 {
   background: var(--fandom-k-gra-blue-to-pink, linear-gradient(271deg, #FE578F -9.84%, #68E8F9 107.18%));
   background-clip: text;
@@ -274,15 +264,14 @@ footer>div>div {
   }
 
   header>div {
-    justify-content: space-around;
+    width: 782px;
   }
 
   main {
-    max-width: 1200px;
     padding: 39px 0 0;
   }
 
-  h1{
+  h1 {
     white-space: pre;
     margin-bottom: 115px;
   }
@@ -301,6 +290,30 @@ footer>div>div {
 
   main figure div {
     height: 383.114px;
+  }
+
+  section>div {
+    width: 698px;
+    height: 315px;
+    display: flex;
+    gap: 51px;
+    margin: 0 auto;
+  }
+
+  section figure,
+  section figure img {
+    width: 385px;
+    height: 315px;
+  }
+
+  #section1 {
+    padding-top: 80px;
+  }
+}
+
+@media(max-width:863px) {
+  header>div {
+    width: auto;
   }
 }
 
