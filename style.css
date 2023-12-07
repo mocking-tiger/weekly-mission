@@ -34,6 +34,7 @@ section>div>div {
 }
 
 section h2 {
+  white-space: pre;
   font-size: 48px;
   font-weight: 700;
   letter-spacing: -0.3px;
@@ -369,4 +370,26 @@ footer>div>div {
   main figure div {
     height: 178.712px;
   }
+
+  section>div{
+    width: 390px;
+    height: 451px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  section h2{
+    font-size: 24px;
+    white-space: nowrap;
+  }
+
+  section p{
+    font-size: 15px;
+  }
+
+  #section1{
+    padding: 40px 32px 36px;
+  }
+
+
 }
