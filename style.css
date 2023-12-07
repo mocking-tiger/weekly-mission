@@ -327,13 +327,13 @@ footer>div>div {
   }
 
   header>div {
-    width: 390px;
+    width: 100%;
   }
 
   main {
     margin: 76px auto 0;
     padding: 28px 32px 0;
-    width: 390px;
+    width: 100%;
   }
 
   h1 {
@@ -371,25 +371,97 @@ footer>div>div {
     height: 178.712px;
   }
 
-  section>div{
-    width: 390px;
-    height: 451px;
+  section>div {
+    width: 100%;
+    height: auto;
     flex-direction: column;
     gap: 24px;
   }
 
-  section h2{
+  section figure,
+  section figure img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+  }
+
+  section h2 {
     font-size: 24px;
     white-space: nowrap;
   }
 
-  section p{
+  section p {
     font-size: 15px;
   }
 
-  #section1{
+  #section2,
+  #section3,
+  #section4 {
+    padding: 40px 32px 42px;
+  }
+
+  #section1 {
     padding: 40px 32px 36px;
   }
 
+  #section1 h2 {
+    background: linear-gradient(97deg, #FE8A8A 1.73%, #A4CEFF 33.89%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  #section2 h2 {
+    background: linear-gradient(276deg, #6FBAFF 44.56%, #FFD88B 60.93%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  #section3 h2 {
+    background: linear-gradient(181deg, #6D7CCD 53.86%, rgba(82, 136, 133, 0.22) 99.4%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  #section4 h2 {
+    background: linear-gradient(275deg, #FE578F 27.48%, #68E8F9 59.2%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  #section2 figure {
+    order: 1;
+  }
+
+  #section4 figure {
+    order: 1;
+  }
+
+  footer {
+    margin-top: 40px;
+  }
+
+  footer>div {
+    padding: 32px 32px 64px 32px;
+  }
+
+  footer>div>div{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #footCenter {
+    order: -1;
+    margin-bottom: 60px;
+    justify-content: space-evenly;
+  }
+
+  #footRight {
+    order: -1;
+  }
 
 }
