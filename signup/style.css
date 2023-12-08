@@ -173,3 +173,12 @@ button:hover {
   width: 42px;
   height: 42px;
 }
+
+
+/* 미디어쿼리(태블릿) */
+
+@media(max-width:1199px){
+  .container{
+    padding-top: 200px;
+  }
+}

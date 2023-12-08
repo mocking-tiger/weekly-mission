@@ -462,7 +462,7 @@ footer>div>div {
 
   footer>div>div {
     flex-wrap: wrap;
-    width: 326px;
+    /* width: 326px; */
   }
 
   #footLeft {
@@ -472,12 +472,10 @@ footer>div>div {
   #footCenter {
     order: -1;
     margin-bottom: 60px;
-    flex-grow: 1;
   }
 
   #footRight {
     order: -1;
-    flex-grow: 1;
   }
 
 }
