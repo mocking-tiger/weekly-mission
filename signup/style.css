@@ -173,3 +173,38 @@ button:hover {
   width: 42px;
   height: 42px;
 }
+
+
+/* 미디어쿼리(태블릿) */
+
+@media(max-width:1199px){
+  .container{
+    padding-top: 200px;
+  }
+}
+
+
+/* 미디어쿼리(모바일) */
+
+@media(max-width:767px){
+  .container{
+    padding: 200px 32px 0;
+  }
+
+  main{
+    width: 400px;
+  }
+
+  #inputBox{
+    width: 100%;
+  }
+
+  #inputEmail,
+  #inputPassword,
+  #repeatPassword,
+  button,
+  #socialLogin{
+    max-width: 400px;
+    width: 100%;
+  }
+}
