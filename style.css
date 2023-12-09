@@ -43,10 +43,20 @@ section h2 {
 
 section p {
   color: #6b6b6b;
-  font-family: 'Abel';
+  font-family: 'Pretendard';
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
+}
+
+section h3{
+  color: #6B6B6B;
+  font-family: 'Pretendard';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 22.5px */
+  margin-top: 16px;
 }
 
 section figure,
@@ -386,7 +396,7 @@ footer>div>div {
     width: 100%;
     height: auto;
     flex-direction: column;
-    gap: 24px;
+    gap: 0;
   }
 
   section figure,
@@ -400,6 +410,7 @@ footer>div>div {
   section h2 {
     font-size: 24px;
     white-space: nowrap;
+    margin-bottom: 20px;
   }
 
   section p {
@@ -448,8 +459,16 @@ footer>div>div {
     order: 1;
   }
 
+  #section2 h3{
+    order: 2;
+  }
+
   #section4 figure {
     order: 1;
+  }
+
+  #section4 h3{
+    order: 2;
   }
 
   footer {
@@ -461,21 +480,27 @@ footer>div>div {
   }
 
   footer>div>div {
-    flex-wrap: wrap;
-    /* width: 326px; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "1 2"
+    "3 .";
   }
 
   #footLeft {
-    flex-grow: 0;
+    grid-row: 2;
+    width: 105px;
   }
 
   #footCenter {
-    order: -1;
     margin-bottom: 60px;
+    grid-column: 1;
+    
   }
 
   #footRight {
-    order: -1;
+    grid-column: 2;
   }
 
 }
