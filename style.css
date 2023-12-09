@@ -57,6 +57,7 @@ section h3{
   font-weight: 500;
   line-height: 150%; /* 22.5px */
   margin-top: 16px;
+  display: none;
 }
 
 section figure,
