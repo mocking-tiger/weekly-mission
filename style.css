@@ -461,21 +461,27 @@ footer>div>div {
   }
 
   footer>div>div {
-    flex-wrap: wrap;
-    /* width: 326px; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "1 2"
+    "3 .";
   }
 
   #footLeft {
-    flex-grow: 0;
+    grid-row: 2;
+    width: 105px;
   }
 
   #footCenter {
-    order: -1;
     margin-bottom: 60px;
+    grid-column: 1;
+    
   }
 
   #footRight {
-    order: -1;
+    grid-column: 2;
   }
 
 }
