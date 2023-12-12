@@ -414,8 +414,13 @@ footer>div>div {
     margin-bottom: 20px;
   }
 
+  section h3{
+    display: block;
+  }
+
   section p {
     font-size: 15px;
+    display: none;
   }
 
   #section2,
