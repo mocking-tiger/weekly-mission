@@ -90,6 +90,21 @@ form input:focus {
   border: 1px solid var(--primary);
 }
 
+#inputEmail.invalidEmail {
+  border: 1px solid var(--Linkbrary-red);
+  margin-bottom: 6px;
+}
+
+h6 {
+  color: var(--Linkbrary-red);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
 #repeatPassword {
   margin-bottom: 30px;
 }
