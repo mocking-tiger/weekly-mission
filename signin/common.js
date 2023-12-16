@@ -13,5 +13,8 @@ export const isEmailValid = function(){
     emailInput.classList.add('invalidEmail');
     errMsg.innerText = '올바른 이메일 주소가 아닙니다.';
     emailInput.after(errMsg);
+  }else{
+    emailInput.classList.remove('invalidEmail')
+    errMsg.remove();
   }
 }
