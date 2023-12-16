@@ -90,7 +90,7 @@ form input:focus {
   border: 1px solid var(--primary);
 }
 
-#inputEmail.invalidEmail {
+#inputEmail.invalidValue {
   border: 1px solid var(--Linkbrary-red);
   margin-bottom: 6px;
 }
