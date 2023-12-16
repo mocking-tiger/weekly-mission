@@ -132,6 +132,7 @@ form img {
   position: absolute;
   top: 55%;
   right: 7%;
+  cursor: pointer;
 }
 
 button {
