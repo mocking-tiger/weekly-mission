@@ -4,6 +4,8 @@ const errInputPassword = document.createElement('h6');
 const errCheckEmail = document.createElement('h6');
 const errCheckPassword = document.createElement('h6');
 const repeatPassword = document.querySelector('#repeatPassword');
+const eyes = document.querySelector('#eyes');
+const eyes2 = document.querySelector('#eyes2');
 
 common.emailInput.addEventListener('focusout', () => {
   if (common.emailInput.value == '') {
@@ -89,4 +91,30 @@ document.addEventListener('keydown', (e) => {
   if(e.key=='Enter'){
     login();
   }
+})
+
+let cnt = 0;
+eyes.addEventListener('click', (e) => {
+  cnt++;
+  if (cnt >= common.eyes.length) {
+    cnt = 0;
+    common.passwordInput.type='password'
+  }else{
+    common.passwordInput.type='text'
+  }
+  eyes.src = common.eyes[cnt];
+  
+})
+
+let cnt2 = 0;
+eyes2.addEventListener('click', (e) => {
+  cnt2++;
+  if (cnt2 >= common.eyes.length) {
+    cnt2 = 0;
+    repeatPassword.type='password'
+  }else{
+    repeatPassword.type='text'
+  }
+  eyes2.src = common.eyes[cnt2];
+  
 })
