@@ -5,18 +5,6 @@
   font-family: Pretendard;
 }
 
-:root {
-  --primary: #6d6afe;
-  --red: #ff5b56;
-  --black: #111322;
-  --white: #ffffff;
-  --gray1: #3e3e43;
-  --gray2: #9fa6b2;
-  --gray3: #ccd5e3;
-  --gray4: #e7effb;
-  --gray5: #f0f6ff;
-}
-
 body {
   background-color: var(--gray5);
 }
@@ -35,9 +23,11 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  position: relative;
 }
 
+label{
+  position: relative;
+}
 
 /* 로고부분 */
 
@@ -96,13 +86,30 @@ form input {
   border: 1px solid var(--gray3);
   background: var(--white);
   outline: none;
+  margin-bottom: 24px;
 }
 
 form input:focus {
   border: 1px solid var(--primary);
 }
 
-#inputEmail {
+#inputEmail.invalidValue {
+  border: 1px solid var(--Linkbrary-red);
+  margin-bottom: 6px;
+}
+
+#inputEmail.checkValue {
+  border: 1px solid var(--Linkbrary-red);
+  margin-bottom: 6px;
+}
+
+h6 {
+  color: var(--Linkbrary-red);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   margin-bottom: 24px;
 }
 
@@ -110,13 +117,24 @@ form input:focus {
   margin-bottom: 30px;
 }
 
+#inputPassword.invalidValue {
+  border: 1px solid var(--Linkbrary-red);
+  margin-bottom: 6px;
+}
+
+#inputPassword.checkValue {
+  border: 1px solid var(--Linkbrary-red);
+  margin-bottom: 6px;
+}
+
 form img {
   width: 16px;
   height: 16px;
   fill: var(--white);
   position: absolute;
-  top: 55%;
+  top: 300%;
   right: 7%;
+  cursor: pointer;
 }
 
 button {
@@ -172,8 +190,8 @@ button:hover {
 
 /* 미디어쿼리(태블릿) */
 
-@media(max-width:1199px){
-  .container{
+@media(max-width:1199px) {
+  .container {
     padding-top: 200px;
   }
 }
@@ -181,23 +199,23 @@ button:hover {
 
 /* 미디어쿼리(모바일) */
 
-@media(max-width:767px){
-  .container{
+@media(max-width:767px) {
+  .container {
     padding: 200px 32px 0;
   }
 
-  main{
+  main {
     width: 400px;
   }
 
-  #inputBox{
+  #inputBox {
     width: 100%;
   }
 
   #inputEmail,
   #inputPassword,
   button,
-  #socialLogin{
+  #socialLogin {
     max-width: 400px;
     width: 100%;
   }
