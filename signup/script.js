@@ -1,4 +1,5 @@
 import * as common from "../signin/common.js";
+
 const errInputEmail = document.createElement('h6');
 const errInputPassword = document.createElement('h6');
 const errCheckEmail = document.createElement('h6');
@@ -8,17 +9,17 @@ const eyes = document.querySelector('#eyes');
 const eyes2 = document.querySelector('#eyes2');
 
 common.emailInput.addEventListener('focusout', () => {
-  if (common.emailInput.value == '') {
+  if (common.emailInput.value === '') {
     errCheckEmail.remove();
     common.emailInput.classList.add('invalidValue');
-    errInputEmail.innerText = '이메일을 입력해주세요.';
+    errInputEmail.innerText = common.PLEASE_INPUT_EMAIL;
     common.emailInput.after(errInputEmail);
-  } else if (common.regExp.test(common.emailInput.value) != true) {
+  } else if (common.regEmail.test(common.emailInput.value) != true) {
     errCheckEmail.remove();
     common.emailInput.classList.add('invalidValue');
-    errInputEmail.innerText = '올바른 이메일 주소가 아닙니다.';
+    errInputEmail.innerText = common.INVALID_EMAIL;
     common.emailInput.after(errInputEmail);
-  } else if (common.emailInput.value == 'test@codeit.com') {
+  } else if (common.emailInput.value === 'test@codeit.com') {
     errCheckEmail.remove();
     common.emailInput.classList.add('invalidValue');
     errInputEmail.innerText = '이미 사용 중인 이메일입니다.';
@@ -31,11 +32,11 @@ common.emailInput.addEventListener('focusout', () => {
 });
 
 common.passwordInput.addEventListener('focusout', () => {
-  if (common.passwordInput.value == '') {
+  if (common.passwordInput.value === '') {
     common.passwordInput.classList.add('invalidValue');
-    errInputPassword.innerText = '비밀번호를 입력해주세요.';
+    errInputPassword.innerText = common.PLEASE_INPUT_PASSWORD;
     common.passwordInput.after(errInputPassword);
-  } else if (common.regPassword.test(common.passwordInput.value) != true) {
+  } else if (common.regPassword.test(common.passwordInput.value) !== true) {
     common.passwordInput.classList.add('invalidValue');
     errInputPassword.innerText = '비밀번호는 영문, 숫자 조합 8자 이상 입력해 주세요.';
     common.passwordInput.after(errInputPassword);
@@ -66,14 +67,14 @@ repeatPassword.addEventListener('focusout', () => {
 })
 
 function login() {
-  if (common.emailInput.value == '') {
+  if (common.emailInput.value === '') {
     errCheckEmail.remove();
     common.emailInput.classList.add('invalidValue');
-    errInputEmail.innerText = '이메일을 입력해주세요.';
+    errInputEmail.innerText = common.PLEASE_INPUT_EMAIL;
     common.emailInput.after(errInputEmail);
-  } else if(common.passwordInput.value == ''){
+  } else if(common.passwordInput.value === ''){
     common.passwordInput.classList.add('invalidValue');
-    errInputPassword.innerText = '비밀번호를 입력해주세요.';
+    errInputPassword.innerText = common.PLEASE_INPUT_PASSWORD;
     common.passwordInput.after(errInputPassword);
   } else if (!common.emailInput.classList.contains('invalidValue') &&
     !common.passwordInput.classList.contains('invalidValue') &&
