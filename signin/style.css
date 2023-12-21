@@ -212,8 +212,8 @@ button:hover {
     width: 100%;
   }
 
-  #inputEmail,
-  #inputPassword,
+  .inputEmail,
+  .inputPassword,
   button,
   #socialLogin {
     max-width: 400px;
