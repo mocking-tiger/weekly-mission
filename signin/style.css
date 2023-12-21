@@ -93,12 +93,12 @@ form input:focus {
   border: 1px solid var(--primary);
 }
 
-#inputEmail.invalidValue {
+.inputEmail.invalidValue {
   border: 1px solid var(--Linkbrary-red);
   margin-bottom: 6px;
 }
 
-#inputEmail.checkValue {
+.inputEmail.checkValue {
   border: 1px solid var(--Linkbrary-red);
   margin-bottom: 6px;
 }
@@ -113,16 +113,16 @@ h6 {
   margin-bottom: 24px;
 }
 
-#inputPassword {
+.inputPassword {
   margin-bottom: 30px;
 }
 
-#inputPassword.invalidValue {
+.inputPassword.invalidValue {
   border: 1px solid var(--Linkbrary-red);
   margin-bottom: 6px;
 }
 
-#inputPassword.checkValue {
+.inputPassword.checkValue {
   border: 1px solid var(--Linkbrary-red);
   margin-bottom: 6px;
 }

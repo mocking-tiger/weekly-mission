@@ -4,7 +4,7 @@ const errInputEmail = document.createElement('h6');
 const errInputPassword = document.createElement('h6');
 const errCheckEmail = document.createElement('h6');
 const errCheckPassword = document.createElement('h6');
-const repeatPassword = document.querySelector('#repeatPassword');
+const repeatPassword = document.querySelector('.repeatPassword');
 const eyes = document.querySelector('#eyes');
 const eyes2 = document.querySelector('#eyes2');
 
