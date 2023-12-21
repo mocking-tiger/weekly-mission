@@ -34,7 +34,6 @@ section>div>div {
 }
 
 section h2 {
-  white-space: pre;
   font-size: 48px;
   font-weight: 700;
   letter-spacing: -0.3px;
@@ -132,6 +131,10 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.whiteSpace-main{
+  display: none;
 }
 
 main a {
@@ -284,8 +287,11 @@ footer>div>div {
   }
 
   h1 {
-    white-space: pre;
     margin-bottom: 115px;
+  }
+
+  .whiteSpace-main{
+    display: block;
   }
 
   main figure {
@@ -391,6 +397,10 @@ footer>div>div {
 
   main figure div {
     height: 178.712px;
+  }
+
+  .whiteSpace{
+    display: none;
   }
 
   section>div {
