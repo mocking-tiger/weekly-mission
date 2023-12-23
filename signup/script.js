@@ -79,7 +79,20 @@ function login() {
   } else if (!common.emailInput.classList.contains('invalidValue') &&
     !common.passwordInput.classList.contains('invalidValue') &&
     !repeatPassword.classList.contains('invalidValue')) {
-    location.href = '../folder/folder.html'
+      fetch('https://bootcamp-api.codeit.kr/api/sign-up', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: common.emailInput.value,
+          password: common.passwordInput.value,
+        }),
+      }).then((response) => {
+        if (response.status === 200) {
+          location.href = '../folder/folder.html';
+        }})
+      
   }
 }
 
@@ -117,5 +130,4 @@ eyes2.addEventListener('click', (e) => {
     repeatPassword.type='text'
   }
   eyes2.src = common.eyes[cnt2];
-  
 })

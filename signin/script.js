@@ -43,7 +43,7 @@ common.passwordInput.addEventListener('focusout', () => {
   }
 })
 
-function checkValues(){
+function checkValues() {
   common.emailInput.classList.add('checkValue');
   errCheckEmail.innerText = '이메일을 확인해주세요.';
   common.emailInput.after(errCheckEmail);
@@ -53,11 +53,11 @@ function checkValues(){
 }
 
 function login() {
-  if (common.emailInput.value === 'test@codeit.com' && common.passwordInput.value === 'codeit101') {
-    location.href = '../folder/folder.html';
-  } else if (common.emailInput.value === newMember.email && common.passwordInput.value === newMember.password) {
     fetch('https://bootcamp-api.codeit.kr/api/sign-in', {
       method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         email: common.emailInput.value,
         password: common.passwordInput.value,
@@ -65,13 +65,10 @@ function login() {
     }).then((response) => {
       if (response.status === 200) {
         location.href = '../folder/folder.html';
-      }else{
+      } else {
         checkValues();
       }
     });
-  } else if (common.emailInput.value !== '' && common.passwordInput.value !== '' && common.regEmail.test(common.emailInput.value) === true) {
-    checkValues();
-  }
 }
 
 common.submit.addEventListener('click', (e) => {
