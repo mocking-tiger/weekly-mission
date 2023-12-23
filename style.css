@@ -25,7 +25,6 @@ section>div {
 }
 
 section>div>div {
-  /*텍스트박스*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,7 +132,7 @@ h1 {
   color: transparent;
 }
 
-.whiteSpace-main{
+.white-space-main{
   display: none;
 }
 
@@ -182,11 +181,11 @@ main figure img {
 
 /***** 섹션1 *****/
 
-#section1 {
+.section1 {
   padding-top: 120px;
 }
 
-#section1 h2 {
+.section1 h2 {
   background: linear-gradient(96deg, #FE8A8A 1.72%, #A4CEFF 74.97%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -196,7 +195,7 @@ main figure img {
 
 /***** 섹션2 *****/
 
-#section2 h2 {
+.section2 h2 {
   background: linear-gradient(277deg, #6FBAFF 59.22%, #FFD88B 93.66%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -206,7 +205,7 @@ main figure img {
 
 /***** 섹션3 *****/
 
-#section3 h2 {
+.section3 h2 {
   background: linear-gradient(99deg, #6D7CCD 19.76%, rgba(82, 136, 133, 0.22) 52.69%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -216,7 +215,7 @@ main figure img {
 
 /***** 섹션4 *****/
 
-#section4 h2 {
+.section4 h2 {
   background: var(--fandom-k-gra-blue-to-pink, linear-gradient(271deg, #FE578F -9.84%, #68E8F9 107.18%));
   background-clip: text;
   -webkit-background-clip: text;
@@ -251,21 +250,21 @@ footer>div>div {
   color: #CFCFCF;
 }
 
-#footLeft {
+.foot-left {
   color: #676767;
 }
 
-#footCenter {
+.foot-center {
   display: flex;
   width: 181.111px;
   gap: 30px;
 }
 
-#footCenter a {
+.foot-center a {
   color: #CFCFCF;
 }
 
-#footRight {
+.foot-right {
   display: flex;
   gap: 12px;
 }
@@ -273,7 +272,7 @@ footer>div>div {
 
 /***** 미디어 쿼리(태블릿) *****/
 
-@media(max-width:1199px) {
+@media(max-width:1199px) and (min-width:768px) {
   header {
     padding: 20px 32px;
   }
@@ -290,7 +289,7 @@ footer>div>div {
     margin-bottom: 115px;
   }
 
-  .whiteSpace-main{
+  .white-space-main{
     display: block;
   }
 
@@ -324,7 +323,7 @@ footer>div>div {
     height: 315px;
   }
 
-  #section1 {
+  .section1 {
     padding-top: 80px;
   }
 }
@@ -399,7 +398,7 @@ footer>div>div {
     height: 178.712px;
   }
 
-  .whiteSpace{
+  .white-space{
     display: none;
   }
 
@@ -433,57 +432,57 @@ footer>div>div {
     display: none;
   }
 
-  #section2,
-  #section3,
-  #section4 {
+  .section2,
+  .section3,
+  .section4 {
     padding: 40px 32px 42px;
   }
 
-  #section1 {
+  .section1 {
     padding: 40px 32px 36px;
   }
 
-  #section1 h2 {
+  .section1 h2 {
     background: linear-gradient(97deg, #FE8A8A 1.73%, #A4CEFF 33.89%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
 
-  #section2 h2 {
+  .section2 h2 {
     background: linear-gradient(276deg, #6FBAFF 44.56%, #FFD88B 60.93%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
 
-  #section3 h2 {
+  .section3 h2 {
     background: linear-gradient(181deg, #6D7CCD 53.86%, rgba(82, 136, 133, 0.22) 99.4%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
 
-  #section4 h2 {
+  .section4 h2 {
     background: linear-gradient(275deg, #FE578F 27.48%, #68E8F9 59.2%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
 
-  #section2 figure {
+  .section2 figure {
     order: 1;
   }
 
-  #section2 h3{
+  .section2 h3{
     order: 2;
   }
 
-  #section4 figure {
+  .section4 figure {
     order: 1;
   }
 
-  #section4 h3{
+  .section4 h3{
     order: 2;
   }
 
@@ -504,18 +503,18 @@ footer>div>div {
     "3 .";
   }
 
-  #footLeft {
+  .foot-left {
     grid-row: 2;
     width: 105px;
   }
 
-  #footCenter {
+  .foot-center {
     margin-bottom: 60px;
     grid-column: 1;
     
   }
 
-  #footRight {
+  .foot-right {
     grid-column: 2;
   }
 

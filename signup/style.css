@@ -28,7 +28,7 @@ main {
 
 /* 로고부분 */
 
-#logo {
+.logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,12 +36,12 @@ main {
   margin-bottom: 30px;
 }
 
-#logo img {
+.logo img {
   width: 210.583px;
   height: 38px;
 }
 
-#logo div {
+.logo div {
   display: flex;
   gap: 8px;
   color: #000;
@@ -51,7 +51,7 @@ main {
   line-height: 24px;
 }
 
-#logo a {
+.logo a {
   color: var(--primary);
   font-weight: 600;
   line-height: normal;
@@ -90,7 +90,7 @@ form input:focus {
   border: 1px solid var(--primary);
 }
 
-.inputEmail.invalidValue {
+.input-email.invalid-value {
   border: 1px solid var(--Linkbrary-red);
   margin-bottom: 6px;
 }
@@ -105,16 +105,16 @@ h6 {
   margin-bottom: 24px;
 }
 
-.inputPassword.invalidValue {
+.input-password.invalid-value {
   border: 1px solid var(--Linkbrary-red);
   margin-bottom: 6px;
 }
 
-.repeatPassword {
+.repeat-password {
   margin-bottom: 30px;
 }
 
-.repeatPassword.invalidValue {
+.repeat-password.invalid-value {
   border: 1px solid var(--Linkbrary-red);
   margin-bottom: 6px;
 }
@@ -151,7 +151,7 @@ button:hover {
 
 /* 소셜로그인부분 */
 
-#socialLogin {
+.social-login {
   display: flex;
   width: 400px;
   padding: 12px 24px;
@@ -170,12 +170,12 @@ button:hover {
   background: var(--gray4);
 }
 
-#socialLogin div {
+.social-login div {
   display: flex;
   gap: 16px;
 }
 
-#socialLogin img {
+.social-login img {
   width: 42px;
   height: 42px;
 }
@@ -201,15 +201,15 @@ button:hover {
     width: 400px;
   }
 
-  #inputBox{
+  .input-box{
     width: 100%;
   }
 
-  .inputEmail,
-  .inputPassword,
-  .repeatPassword,
+  .input-email,
+  .input-password,
+  .repeat-password,
   button,
-  #socialLogin{
+  .social-login{
     max-width: 400px;
     width: 100%;
   }
