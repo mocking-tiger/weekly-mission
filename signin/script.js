@@ -10,6 +10,10 @@ const newMember = {
   password: 'sprint101',
 };
 
+document.addEventListener('DOMContentLoaded', (e)=>{
+  if(localStorage.getItem('accessToken')) location.href = '../folder/folder.html';
+})
+
 common.emailInput.addEventListener('focusout', () => {
   if (common.emailInput.value === '') {
     errCheckEmail.remove();
@@ -108,4 +112,3 @@ eyes.addEventListener('click', (e) => {
   }
   eyes.src = common.eyes[cnt];
 })
-

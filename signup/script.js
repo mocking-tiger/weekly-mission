@@ -8,6 +8,10 @@ const repeatPassword = document.querySelector('.repeatPassword');
 const eyes = document.querySelector('#eyes');
 const eyes2 = document.querySelector('#eyes2');
 
+document.addEventListener('DOMContentLoaded', (e)=>{
+  if(localStorage.getItem('accessToken')) location.href = '../folder/folder.html';
+})
+
 common.emailInput.addEventListener('focusout', () => {
   if (common.emailInput.value === '') {
     errCheckEmail.remove();
