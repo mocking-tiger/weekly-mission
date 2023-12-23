@@ -53,6 +53,8 @@ function checkValues() {
 }
 
 function login() {
+
+  //엑세스토큰 로컬스토리지에 저장
     fetch('https://bootcamp-api.codeit.kr/api/sign-in', {
       method: 'POST',
       headers: {
@@ -62,13 +64,32 @@ function login() {
         email: common.emailInput.value,
         password: common.passwordInput.value,
       })
-    }).then((response) => {
+    })
+    .then((response)=>response.json())
+    .then(response=>{
+      if(response.data.accessToken){
+        localStorage.setItem('accessToken', response.data.accessToken);
+      }
+    });
+  
+  //로그인 기능 실행  
+    fetch('https://bootcamp-api.codeit.kr/api/sign-in', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: common.emailInput.value,
+        password: common.passwordInput.value,
+      })
+    })
+    .then((response) => {
       if (response.status === 200) {
         location.href = '../folder/folder.html';
       } else {
         checkValues();
       }
-    });
+    });   
 }
 
 common.submit.addEventListener('click', (e) => {
