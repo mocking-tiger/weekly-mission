@@ -25,7 +25,6 @@ section>div {
 }
 
 section>div>div {
-  /*텍스트박스*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -273,7 +272,7 @@ footer>div>div {
 
 /***** 미디어 쿼리(태블릿) *****/
 
-@media(max-width:1199px) {
+@media(max-width:1199px) and (min-width:768px) {
   header {
     padding: 20px 32px;
   }
