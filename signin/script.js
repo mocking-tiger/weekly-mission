@@ -4,30 +4,30 @@ const errInputEmail = document.createElement('h6');
 const errInputPassword = document.createElement('h6');
 const errCheckEmail = document.createElement('h6');
 const errCheckPassword = document.createElement('h6');
-const eyes = document.querySelector('#eyes');
+const eyes = document.querySelector('.eyes');
 const newMember = {
   email: 'test@codeit.com',
   password: 'sprint101',
 };
 
-document.addEventListener('DOMContentLoaded', (e)=>{
-  if(localStorage.getItem('accessToken')) location.href = '../folder/folder.html';
-})
+// document.addEventListener('DOMContentLoaded', (e)=>{
+//   if(localStorage.getItem('accessToken')) location.href = '../folder/folder.html';
+// })
 
 common.emailInput.addEventListener('focusout', () => {
   if (common.emailInput.value === '') {
     errCheckEmail.remove();
-    common.emailInput.classList.add('invalidValue');
+    common.emailInput.classList.add('invalid-value');
     errInputEmail.innerText = common.PLEASE_INPUT_EMAIL;
     common.emailInput.after(errInputEmail);
   } else if (common.regEmail.test(common.emailInput.value) != true) {
     errCheckEmail.remove();
-    common.emailInput.classList.add('invalidValue');
+    common.emailInput.classList.add('invalid-value');
     errInputEmail.innerText = common.INVALID_EMAIL;
     common.emailInput.after(errInputEmail);
   } else {
-    common.emailInput.classList.remove('checkValue')
-    common.emailInput.classList.remove('invalidValue')
+    common.emailInput.classList.remove('check-value')
+    common.emailInput.classList.remove('invalid-value')
     errInputEmail.remove();
     errCheckEmail.remove();
   }
@@ -36,22 +36,22 @@ common.emailInput.addEventListener('focusout', () => {
 common.passwordInput.addEventListener('focusout', () => {
   if (common.passwordInput.value === '') {
     errCheckPassword.remove();
-    common.passwordInput.classList.add('invalidValue');
+    common.passwordInput.classList.add('invalid-value');
     errInputPassword.innerText = common.PLEASE_INPUT_PASSWORD;
     common.passwordInput.after(errInputPassword);
   } else {
-    common.passwordInput.classList.remove('invalidValue')
-    common.passwordInput.classList.remove('checkValue')
+    common.passwordInput.classList.remove('invalid-value')
+    common.passwordInput.classList.remove('check-value')
     errInputPassword.remove();
     errCheckPassword.remove();
   }
 })
 
 function checkValues() {
-  common.emailInput.classList.add('checkValue');
+  common.emailInput.classList.add('check-value');
   errCheckEmail.innerText = '이메일을 확인해주세요.';
   common.emailInput.after(errCheckEmail);
-  common.passwordInput.classList.add('checkValue');
+  common.passwordInput.classList.add('check-value');
   errCheckPassword.innerText = '비밀번호를 확인해주세요.';
   common.passwordInput.after(errCheckPassword);
 }

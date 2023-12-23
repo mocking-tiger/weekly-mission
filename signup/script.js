@@ -4,23 +4,23 @@ const errInputEmail = document.createElement('h6');
 const errInputPassword = document.createElement('h6');
 const errCheckEmail = document.createElement('h6');
 const errCheckPassword = document.createElement('h6');
-const repeatPassword = document.querySelector('.repeatPassword');
-const eyes = document.querySelector('#eyes');
-const eyes2 = document.querySelector('#eyes2');
+const repeatPassword = document.querySelector('.repeat-password');
+const eyes = document.querySelector('.eyes');
+const eyes2 = document.querySelector('.eyes2');
 
-document.addEventListener('DOMContentLoaded', (e)=>{
-  if(localStorage.getItem('accessToken')) location.href = '../folder/folder.html';
-})
+// document.addEventListener('DOMContentLoaded', (e)=>{
+//   if(localStorage.getItem('accessToken')) location.href = '../folder/folder.html';
+// })
 
 common.emailInput.addEventListener('focusout', () => {
   if (common.emailInput.value === '') {
     errCheckEmail.remove();
-    common.emailInput.classList.add('invalidValue');
+    common.emailInput.classList.add('invalid-value');
     errInputEmail.innerText = common.PLEASE_INPUT_EMAIL;
     common.emailInput.after(errInputEmail);
   } else if (common.regEmail.test(common.emailInput.value) != true) {
     errCheckEmail.remove();
-    common.emailInput.classList.add('invalidValue');
+    common.emailInput.classList.add('invalid-value');
     errInputEmail.innerText = common.INVALID_EMAIL;
     common.emailInput.after(errInputEmail);
   } else if (common.emailInput.value !== '') {
@@ -35,41 +35,41 @@ common.emailInput.addEventListener('focusout', () => {
       })
     }).then((response) => {
       if (response.status === 409) {
-        common.emailInput.classList.add('invalidValue');
+        common.emailInput.classList.add('invalid-value');
         errInputEmail.innerText = '이미 사용 중인 이메일입니다.';
         common.emailInput.after(errInputEmail);
       } else {
-        common.emailInput.classList.remove('checkValue')
-        common.emailInput.classList.remove('invalidValue')
+        common.emailInput.classList.remove('check-value')
+        common.emailInput.classList.remove('invalid-value')
         errInputEmail.remove();
       }
     });
   } else {
-    common.emailInput.classList.remove('checkValue')
-    common.emailInput.classList.remove('invalidValue')
+    common.emailInput.classList.remove('check-value')
+    common.emailInput.classList.remove('invalid-value')
     errInputEmail.remove();
   }
 });
 
 common.passwordInput.addEventListener('focusout', () => {
   if (common.passwordInput.value === '') {
-    common.passwordInput.classList.add('invalidValue');
+    common.passwordInput.classList.add('invalid-value');
     errInputPassword.innerText = common.PLEASE_INPUT_PASSWORD;
     common.passwordInput.after(errInputPassword);
   } else if (common.regPassword.test(common.passwordInput.value) !== true) {
-    common.passwordInput.classList.add('invalidValue');
+    common.passwordInput.classList.add('invalid-value');
     errInputPassword.innerText = '비밀번호는 영문, 숫자 조합 8자 이상 입력해 주세요.';
     common.passwordInput.after(errInputPassword);
   } else if (repeatPassword.value !== common.passwordInput.value) {
     errInputPassword.remove();
-    common.passwordInput.classList.remove('invalidValue')
-    repeatPassword.classList.add('invalidValue');
+    common.passwordInput.classList.remove('invalid-value')
+    repeatPassword.classList.add('invalid-value');
     errCheckPassword.innerText = '비밀번호가 일치하지 않아요.';
     repeatPassword.after(errCheckPassword);
   } else {
-    common.passwordInput.classList.remove('invalidValue')
-    common.passwordInput.classList.remove('checkValue')
-    repeatPassword.classList.remove('invalidValue');
+    common.passwordInput.classList.remove('invalid-value')
+    common.passwordInput.classList.remove('check-value')
+    repeatPassword.classList.remove('invalid-value');
     errInputPassword.remove();
     errCheckPassword.remove();
   }
@@ -77,11 +77,11 @@ common.passwordInput.addEventListener('focusout', () => {
 
 repeatPassword.addEventListener('focusout', () => {
   if (repeatPassword.value !== common.passwordInput.value) {
-    repeatPassword.classList.add('invalidValue');
+    repeatPassword.classList.add('invalid-value');
     errCheckPassword.innerText = '비밀번호가 일치하지 않아요.';
     repeatPassword.after(errCheckPassword);
   } else {
-    repeatPassword.classList.remove('invalidValue');
+    repeatPassword.classList.remove('invalid-value');
     errCheckPassword.remove();
   }
 })
@@ -89,16 +89,16 @@ repeatPassword.addEventListener('focusout', () => {
 function login() {
   if (common.emailInput.value === '') {
     errCheckEmail.remove();
-    common.emailInput.classList.add('invalidValue');
+    common.emailInput.classList.add('invalid-value');
     errInputEmail.innerText = common.PLEASE_INPUT_EMAIL;
     common.emailInput.after(errInputEmail);
   } else if (common.passwordInput.value === '') {
-    common.passwordInput.classList.add('invalidValue');
+    common.passwordInput.classList.add('invalid-value');
     errInputPassword.innerText = common.PLEASE_INPUT_PASSWORD;
     common.passwordInput.after(errInputPassword);
-  } else if (!common.emailInput.classList.contains('invalidValue') &&
-    !common.passwordInput.classList.contains('invalidValue') &&
-    !repeatPassword.classList.contains('invalidValue')) {
+  } else if (!common.emailInput.classList.contains('invalid-value') &&
+    !common.passwordInput.classList.contains('invalid-value') &&
+    !repeatPassword.classList.contains('invalid-value')) {
     fetch('https://bootcamp-api.codeit.kr/api/sign-up', {
       method: 'POST',
       headers: {
