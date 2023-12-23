@@ -4,15 +4,11 @@ const errInputEmail = document.createElement('h6');
 const errInputPassword = document.createElement('h6');
 const errCheckEmail = document.createElement('h6');
 const errCheckPassword = document.createElement('h6');
-const eyes = document.querySelector('.eyes');
-const newMember = {
-  email: 'test@codeit.com',
-  password: 'sprint101',
-};
+const eye = document.querySelector('.eye');
 
-// document.addEventListener('DOMContentLoaded', (e)=>{
-//   if(localStorage.getItem('accessToken')) location.href = '../folder/folder.html';
-// })
+document.addEventListener('DOMContentLoaded', (e)=>{
+  if(localStorage.getItem('accessToken')) location.href = '../folder/folder.html';
+})
 
 common.emailInput.addEventListener('focusout', () => {
   if (common.emailInput.value === '') {
@@ -101,14 +97,6 @@ common.submit.addEventListener('click', (e) => {
   login();
 })
 
-let cnt = 0;
-eyes.addEventListener('click', (e) => {
-  cnt++;
-  if (cnt >= common.eyes.length) {
-    cnt = 0;
-    common.passwordInput.type = 'password'
-  } else {
-    common.passwordInput.type = 'text'
-  }
-  eyes.src = common.eyes[cnt];
+eye.addEventListener('click', (e)=>{
+  common.passwordTypeChange();
 })

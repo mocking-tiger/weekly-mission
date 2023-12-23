@@ -5,12 +5,12 @@ const errInputPassword = document.createElement('h6');
 const errCheckEmail = document.createElement('h6');
 const errCheckPassword = document.createElement('h6');
 const repeatPassword = document.querySelector('.repeat-password');
-const eyes = document.querySelector('.eyes');
-const eyes2 = document.querySelector('.eyes2');
+const eye = document.querySelector('.eye');
+const eye2 = document.querySelector('.eye2');
 
-// document.addEventListener('DOMContentLoaded', (e)=>{
-//   if(localStorage.getItem('accessToken')) location.href = '../folder/folder.html';
-// })
+document.addEventListener('DOMContentLoaded', (e)=>{
+  if(localStorage.getItem('accessToken')) location.href = '../folder/folder.html';
+})
 
 common.emailInput.addEventListener('focusout', () => {
   if (common.emailInput.value === '') {
@@ -128,27 +128,19 @@ document.addEventListener('keydown', (e) => {
   }
 })
 
-let cnt = 0;
-eyes.addEventListener('click', (e) => {
-  cnt++;
-  if (cnt >= common.eyes.length) {
-    cnt = 0;
-    common.passwordInput.type = 'password'
-  } else {
-    common.passwordInput.type = 'text'
-  }
-  eyes.src = common.eyes[cnt];
-
+eye.addEventListener('click', (e)=>{
+  common.passwordTypeChange();
 })
 
-let cnt2 = 0;
-eyes2.addEventListener('click', (e) => {
-  cnt2++;
-  if (cnt2 >= common.eyes.length) {
-    cnt2 = 0;
-    repeatPassword.type = 'password'
-  } else {
-    repeatPassword.type = 'text'
+let isPasswordType = false;
+eye2.addEventListener('click', (e)=>{
+  if(isPasswordType === false){
+    repeatPassword.type = 'text';
+    eye2.src = common.eyes[1];
+    isPasswordType = true;
+  }else{
+    repeatPassword.type = 'password';
+    eye2.src = common.eyes[0];
+    isPasswordType = false;
   }
-  eyes2.src = common.eyes[cnt2];
 })
