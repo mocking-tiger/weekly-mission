@@ -19,11 +19,27 @@ common.emailInput.addEventListener('focusout', () => {
     common.emailInput.classList.add('invalidValue');
     errInputEmail.innerText = common.INVALID_EMAIL;
     common.emailInput.after(errInputEmail);
-  } else if (common.emailInput.value === 'test@codeit.com') {
+  } else if (common.emailInput.value !== '') {
     errCheckEmail.remove();
-    common.emailInput.classList.add('invalidValue');
-    errInputEmail.innerText = '이미 사용 중인 이메일입니다.';
-    common.emailInput.after(errInputEmail);
+    fetch('https://bootcamp-api.codeit.kr/api/check-email', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: common.emailInput.value,
+      })
+    }).then((response) => {
+      if (response.status === 409) {
+        common.emailInput.classList.add('invalidValue');
+        errInputEmail.innerText = '이미 사용 중인 이메일입니다.';
+        common.emailInput.after(errInputEmail);
+      } else {
+        common.emailInput.classList.remove('checkValue')
+        common.emailInput.classList.remove('invalidValue')
+        errInputEmail.remove();
+      }
+    });
   } else {
     common.emailInput.classList.remove('checkValue')
     common.emailInput.classList.remove('invalidValue')
@@ -72,27 +88,28 @@ function login() {
     common.emailInput.classList.add('invalidValue');
     errInputEmail.innerText = common.PLEASE_INPUT_EMAIL;
     common.emailInput.after(errInputEmail);
-  } else if(common.passwordInput.value === ''){
+  } else if (common.passwordInput.value === '') {
     common.passwordInput.classList.add('invalidValue');
     errInputPassword.innerText = common.PLEASE_INPUT_PASSWORD;
     common.passwordInput.after(errInputPassword);
   } else if (!common.emailInput.classList.contains('invalidValue') &&
     !common.passwordInput.classList.contains('invalidValue') &&
     !repeatPassword.classList.contains('invalidValue')) {
-      fetch('https://bootcamp-api.codeit.kr/api/sign-up', {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: common.emailInput.value,
-          password: common.passwordInput.value,
-        }),
-      }).then((response) => {
-        if (response.status === 200) {
-          location.href = '../folder/folder.html';
-        }})
-      
+    fetch('https://bootcamp-api.codeit.kr/api/sign-up', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: common.emailInput.value,
+        password: common.passwordInput.value,
+      }),
+    }).then((response) => {
+      if (response.status === 200) {
+        location.href = '../folder/folder.html';
+      }
+    })
+
   }
 }
 
@@ -102,7 +119,7 @@ common.submit.addEventListener('click', (e) => {
 })
 
 document.addEventListener('keydown', (e) => {
-  if(e.key=='Enter'){
+  if (e.key == 'Enter') {
     login();
   }
 })
@@ -112,12 +129,12 @@ eyes.addEventListener('click', (e) => {
   cnt++;
   if (cnt >= common.eyes.length) {
     cnt = 0;
-    common.passwordInput.type='password'
-  }else{
-    common.passwordInput.type='text'
+    common.passwordInput.type = 'password'
+  } else {
+    common.passwordInput.type = 'text'
   }
   eyes.src = common.eyes[cnt];
-  
+
 })
 
 let cnt2 = 0;
@@ -125,9 +142,9 @@ eyes2.addEventListener('click', (e) => {
   cnt2++;
   if (cnt2 >= common.eyes.length) {
     cnt2 = 0;
-    repeatPassword.type='password'
-  }else{
-    repeatPassword.type='text'
+    repeatPassword.type = 'password'
+  } else {
+    repeatPassword.type = 'text'
   }
   eyes2.src = common.eyes[cnt2];
 })

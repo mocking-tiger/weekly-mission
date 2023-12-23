@@ -61,7 +61,7 @@ function login() {
       body: JSON.stringify({
         email: common.emailInput.value,
         password: common.passwordInput.value,
-      }),
+      })
     }).then((response) => {
       if (response.status === 200) {
         location.href = '../folder/folder.html';
