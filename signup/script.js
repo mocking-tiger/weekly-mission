@@ -34,7 +34,7 @@ common.emailInput.addEventListener('focusout', () => {
         common.emailInput.classList.add('invalidValue');
         errInputEmail.innerText = '이미 사용 중인 이메일입니다.';
         common.emailInput.after(errInputEmail);
-      } else {
+      }else {
         common.emailInput.classList.remove('checkValue')
         common.emailInput.classList.remove('invalidValue')
         errInputEmail.remove();
