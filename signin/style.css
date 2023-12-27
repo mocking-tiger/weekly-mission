@@ -1,0 +1,222 @@
+/* 공통요소 */
+
+* {
+  box-sizing: border-box;
+  font-family: Pretendard;
+}
+
+body {
+  background-color: var(--gray5);
+}
+
+.container {
+  width: 100%;
+  padding-top: 238px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+label{
+  position: relative;
+}
+
+/* 로고부분 */
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 210.583px;
+  height: 38px;
+}
+
+.logo div {
+  display: flex;
+  gap: 8px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.logo a {
+  color: var(--primary);
+  font-weight: 600;
+  line-height: normal;
+}
+
+
+/* input박스 부분 */
+
+form {
+  display: flex;
+  flex-direction: column;
+  color: var(--black);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+label {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+form input {
+  width: 400px;
+  padding: 18px 15px;
+  border-radius: 8px;
+  border: 1px solid var(--gray3);
+  background: var(--white);
+  outline: none;
+  margin-bottom: 24px;
+}
+
+form input:focus {
+  border: 1px solid var(--primary);
+}
+
+.input-email.invalid-value {
+  border: 1px solid var(--Linkbrary-red);
+  margin-bottom: 6px;
+}
+
+.input-email.check-value {
+  border: 1px solid var(--Linkbrary-red);
+  margin-bottom: 6px;
+}
+
+h6 {
+  color: var(--Linkbrary-red);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
+.input-password {
+  margin-bottom: 30px;
+}
+
+.input-password.invalid-value {
+  border: 1px solid var(--Linkbrary-red);
+  margin-bottom: 6px;
+}
+
+.input-password.check-value {
+  border: 1px solid var(--Linkbrary-red);
+  margin-bottom: 6px;
+}
+
+form img {
+  width: 16px;
+  height: 16px;
+  fill: var(--white);
+  position: absolute;
+  top: 300%;
+  right: 7%;
+  cursor: pointer;
+}
+
+button {
+  color: var(--grey-light, #F5F5F5);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 400px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: var(--gra-purpleblue-to-skyblue,
+      linear-gradient(91deg, #6D6AFE 0.12%, #6AE3FE 101.84%));
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+/* 소셜로그인부분 */
+
+.social-login {
+  display: flex;
+  width: 400px;
+  padding: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--linkbrary-gray-100, #373740);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  border-radius: 8px;
+  border: 1px solid var(--gray3);
+  background: var(--gray4);
+}
+
+.social-login div {
+  display: flex;
+  gap: 16px;
+}
+
+.social-login img {
+  width: 42px;
+  height: 42px;
+}
+
+
+/* 미디어쿼리(태블릿) */
+
+@media(max-width:1199px) {
+  .container {
+    padding-top: 200px;
+  }
+}
+
+
+/* 미디어쿼리(모바일) */
+
+@media(max-width:767px) {
+  .container {
+    padding: 200px 32px 0;
+  }
+
+  main {
+    width: 400px;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+
+  .input-email,
+  .input-password,
+  button,
+  .social-login {
+    max-width: 400px;
+    width: 100%;
+  }
+}

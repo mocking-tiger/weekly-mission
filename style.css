@@ -1,0 +1,521 @@
+/***** 공통요소 *****/
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.container {
+  background: var(--linkbrary-bg, #F0F6FF);
+}
+
+section {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 50px 0 50px;
+}
+
+section>div {
+  width: 998px;
+  height: 450px;
+  display: flex;
+  gap: 157px;
+  margin: 0 auto;
+}
+
+section>div>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+section h2 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: normal;
+}
+
+section p {
+  color: #6b6b6b;
+  font-family: 'Pretendard';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+section h3{
+  color: #6B6B6B;
+  font-family: 'Pretendard';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 22.5px */
+  margin-top: 16px;
+  display: none;
+}
+
+section figure,
+section figure img {
+  width: 550px;
+  height: 450px;
+  border-radius: 15px;
+  background: #F0F6FF;
+  position: relative;
+}
+
+span {
+  color: #000;
+}
+
+
+/***** 헤더 *****/
+
+header {
+  padding: 20px 200px;
+  max-width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: var(--linkbrary-bg, #F0F6FF);
+  z-index: 1;
+}
+
+header>div {
+  margin: 0 auto;
+  max-width: 1503px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header>div>a:nth-child(2) {
+  padding: 16px 20px;
+  width: 128px;
+  background: var(--gra-purpleblue-to-skyblue,
+      linear-gradient(91deg, #6D6AFE 0.12%, #6AE3FE 101.84%));
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+
+
+/***** 메인 *****/
+
+main {
+  max-width: 1920px;
+  padding: 70px 0 0;
+  margin: 90px auto 0;
+  overflow: hidden;
+}
+
+main>div {
+  text-align: center;
+}
+
+h1 {
+  margin: 0 auto;
+  width: 708px;
+  height: 160px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 80px;
+  background: linear-gradient(91deg, #6D6AFE 17.28%, #FF9F9F 74.98%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.white-space-main{
+  display: none;
+}
+
+main a {
+  display: block;
+  margin: 40px auto;
+  width: 350px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: var(--gra-purpleblue-to-skyblue,
+      linear-gradient(91deg, #6D6AFE 0.12%, #6AE3FE 101.84%));
+  color: #F5F5F5;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+main figure {
+  width: 1200px;
+  height: 590px;
+  margin: 0 auto;
+  position: relative;
+}
+
+main figure>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 50px 41px;
+  width: 1118px;
+  height: 659px;
+  border-radius: 25px;
+  background: linear-gradient(180deg,
+      rgba(196, 196, 196, 0.00) 67.68%,
+      #F0F6FF 94.76%);
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+}
+
+main figure img {
+  width: 1118px;
+  height: 706.956px;
+  margin: 50px 41px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+}
+
+
+/***** 섹션1 *****/
+
+.section1 {
+  padding-top: 120px;
+}
+
+.section1 h2 {
+  background: linear-gradient(96deg, #FE8A8A 1.72%, #A4CEFF 74.97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+/***** 섹션2 *****/
+
+.section2 h2 {
+  background: linear-gradient(277deg, #6FBAFF 59.22%, #FFD88B 93.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+/***** 섹션3 *****/
+
+.section3 h2 {
+  background: linear-gradient(99deg, #6D7CCD 19.76%, rgba(82, 136, 133, 0.22) 52.69%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+/***** 섹션4 *****/
+
+.section4 h2 {
+  background: var(--fandom-k-gra-blue-to-pink, linear-gradient(271deg, #FE578F -9.84%, #68E8F9 107.18%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+/***** 푸터 *****/
+
+footer {
+  width: 100%;
+  margin-top: 120px;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+footer>div {
+  height: 160px;
+  padding: 32px 104px 64px;
+  background: var(--the-julge-black, #111322);
+}
+
+footer>div>div {
+  margin: 0 auto;
+  max-width: 1695px;
+  display: flex;
+  justify-content: space-between;
+  color: #CFCFCF;
+}
+
+.foot-left {
+  color: #676767;
+}
+
+.foot-center {
+  display: flex;
+  width: 181.111px;
+  gap: 30px;
+}
+
+.foot-center a {
+  color: #CFCFCF;
+}
+
+.foot-right {
+  display: flex;
+  gap: 12px;
+}
+
+
+/***** 미디어 쿼리(태블릿) *****/
+
+@media(max-width:1199px) and (min-width:768px) {
+  header {
+    padding: 20px 32px;
+  }
+
+  header>div {
+    width: 782px;
+  }
+
+  main {
+    padding: 39px 0 0;
+  }
+
+  h1 {
+    margin-bottom: 115px;
+  }
+
+  .white-space-main{
+    display: block;
+  }
+
+  main figure {
+    width: 698px;
+    height: 343px;
+  }
+
+  main figure img,
+  main figure div {
+    width: 650.303px;
+    height: 410.993px;
+    margin: 29.1px 23.8px -69px;
+  }
+
+  main figure div {
+    height: 383.114px;
+  }
+
+  section>div {
+    width: 698px;
+    height: 315px;
+    display: flex;
+    gap: 51px;
+    margin: 0 auto;
+  }
+
+  section figure,
+  section figure img {
+    width: 385px;
+    height: 315px;
+  }
+
+  .section1 {
+    padding-top: 80px;
+  }
+}
+
+@media(max-width:863px) {
+  header>div {
+    width: auto;
+  }
+}
+
+
+/***** 미디어 쿼리(모바일) *****/
+
+@media(max-width:767px) {
+  header {
+    padding: 13px 32px;
+  }
+
+  header>div {
+    width: 100%;
+  }
+
+  header img {
+    width: 88.667px;
+    height: 16px;
+  }
+
+  header>div>a:nth-of-type(2) {
+    width: 80px;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  main {
+    margin: 60px auto 0;
+    padding: 28px 32px 0;
+    width: 100%;
+  }
+
+  h1 {
+    width: auto;
+    height: auto;
+    margin: 0;
+    font-size: 32px;
+    line-height: 42px;
+    background: linear-gradient(91deg, #6D6AFE 40.28%, #FF9F9F 55.98%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  main a {
+    width: 200px;
+    margin: 24px auto;
+    font-family: Pretendard;
+    font-size: 14px;
+  }
+
+  main figure {
+    width: 325px;
+    height: 160px;
+  }
+
+  main figure img,
+  main figure div {
+    width: 302.792px;
+    height: 191.717px;
+    margin: 13.6px 11.1px -32px;
+  }
+
+  main figure div {
+    height: 178.712px;
+  }
+
+  .white-space{
+    display: none;
+  }
+
+  section>div {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  section figure,
+  section figure img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+  }
+
+  section h2 {
+    font-size: 24px;
+    white-space: nowrap;
+    margin-bottom: 20px;
+  }
+
+  section h3{
+    display: block;
+  }
+
+  section p {
+    font-size: 15px;
+    display: none;
+  }
+
+  .section2,
+  .section3,
+  .section4 {
+    padding: 40px 32px 42px;
+  }
+
+  .section1 {
+    padding: 40px 32px 36px;
+  }
+
+  .section1 h2 {
+    background: linear-gradient(97deg, #FE8A8A 1.73%, #A4CEFF 33.89%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .section2 h2 {
+    background: linear-gradient(276deg, #6FBAFF 44.56%, #FFD88B 60.93%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .section3 h2 {
+    background: linear-gradient(181deg, #6D7CCD 53.86%, rgba(82, 136, 133, 0.22) 99.4%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .section4 h2 {
+    background: linear-gradient(275deg, #FE578F 27.48%, #68E8F9 59.2%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .section2 figure {
+    order: 1;
+  }
+
+  .section2 h3{
+    order: 2;
+  }
+
+  .section4 figure {
+    order: 1;
+  }
+
+  .section4 h3{
+    order: 2;
+  }
+
+  footer {
+    margin-top: 40px;
+  }
+
+  footer>div {
+    padding: 32px 32px 64px 32px;
+  }
+
+  footer>div>div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "1 2"
+    "3 .";
+  }
+
+  .foot-left {
+    grid-row: 2;
+    width: 105px;
+  }
+
+  .foot-center {
+    margin-bottom: 60px;
+    grid-column: 1;
+    
+  }
+
+  .foot-right {
+    grid-column: 2;
+  }
+
+}
